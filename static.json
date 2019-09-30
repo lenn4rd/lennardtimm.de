@@ -1,0 +1,8 @@
+{
+  "canonical_host": "lennardtimm.de",
+  "https_only": true,
+  "logging": {
+    "access": false
+  },
+  "root": "build/"
+}
