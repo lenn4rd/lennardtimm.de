@@ -1,0 +1,11 @@
+{
+  "name": "lennardtimm.de",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/lenn4rd/lennardtimm.de.git",
+  "author": "Lennard Timm <hello@lennardtimm.de>",
+  "license": "MIT",
+  "dependencies": {
+    "tachyons": "^4.11.1"
+  }
+}
