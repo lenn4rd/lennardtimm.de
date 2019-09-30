@@ -26,4 +26,7 @@ end
 require "rubygems"
 require "bundler/setup"
 
+# Enrich ENV variables with content from .env
+require 'dotenv/load'
+
 load Gem.bin_path("middleman-cli", "middleman")
