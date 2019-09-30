@@ -1,26 +1,182 @@
-@import "tachyons/css/tachyons.css";
+@import "tachyons";
 
 body {
-  background-color: #fbc547;
   color: #333;
-  font-family: -apple-system, BlinkMacSystemFont, "Avenir Next", "Avenir",
+  font-family: -apple-system, Arial, Helvetica, "Avenir Next", "Avenir",
     "Segoe UI", "Lucida Grande", "Helvetica Neue", "Helvetica", "Fira Sans",
     "Roboto", "Noto", "Droid Sans", "Cantarell", "Oxygen", "Ubuntu",
     "Franklin Gothic Medium", "Century Gothic", "Liberation Sans", sans-serif;
-  padding: 18vh 1rem;
-  text-align: center;
 }
 
-a {
-  color: rgba(#000, 0.7);
+h1, h3, p {
+  font-weight: 600;
+}
 
-  &:focus,
-  &:hover {
-    color: rgba(#000, 0.6);
+a.return-to {
+  text-decoration: none;
+}
+
+@media screen and (min-width: 20em) {
+  a {
+    text-decoration-thickness: 0.15rem;
+  }
+
+  p.f4 a, .f4-ns a {
+    text-decoration-thickness: 0.12rem;
+  }
+
+  p.f5 a {
+    text-decoration-thickness: 0.06rem;
   }
 }
 
-.middleman-logo {
-  margin-bottom: 1rem;
-  width: 10rem;
+@media screen and (min-width: 30em) and (max-width: 60em) {
+  a {
+    text-decoration-thickness: 0.3rem;
+  }
+
+  p.f4 a {
+    text-decoration-thickness: 0.24rem;
+  }
+
+  p.f5 a {
+    text-decoration-thickness: 0.12rem;
+  }
+}
+
+@media screen and (min-width: 60em) {
+  a {
+    text-decoration-thickness: 0.4rem;
+  }
+
+  p.f4 a {
+    text-decoration-thickness: 0.32rem;
+  }
+
+  p.f5 a {
+    text-decoration-thickness: 0.16rem;
+  }
+}
+
+section#who {
+  color: #001B44;
+  background-color: #9EEBCF;
+}
+
+section#what {
+  color: #FFA3D7;
+  background-color: #001B44;
+}
+
+section#how {
+  color: #F6FFFE;
+  background-color: #FFA3D7;
+}
+
+section#recent-0 {
+  color: #FF4136;
+  background-color: #F6FFFE;
+}
+
+section#recent-1 {
+  color: #eee;
+  background-color: #FF4136;
+
+  a, a:visited {
+    color: #001B44;
+  }
+
+  a:hover {
+    color: #eee;
+  }
+}
+
+section#recent-2 {
+  color: #FF4136;
+  background-color: #eee;
+
+  a, a:visited {
+    color: #001B44;
+  }
+
+  a:hover {
+    color: #FF4136;
+  }
+}
+
+section#experience {
+  color: #001B44;
+  background-color: #FFA3D7;
+
+  ul {
+    list-style-type: none;
+    padding: 0;
+
+    li {
+      background-color: #001B44;
+      border-radius: 8px;
+      color: #F6FFFE;
+      display: inline-block;
+      font-weight: 400;
+      padding: 0.6rem 1.25rem;
+      margin-right: 0.5rem;
+      margin-bottom: 1rem;
+    }
+  }
+}
+
+section#contact {
+  color: #001B44;
+  background-color: #fff;
+
+  p.highlight {
+    color: #FF4136;
+  }
+
+  a, a:visited {
+    color: #FF4136;
+  }
+
+  a:hover {
+    color: #001B44;
+  }
+}
+
+footer {
+  ul {
+    list-style-type: none;
+    padding: 0;
+
+    li {
+      display: inline-block;
+      padding: 0.5rem;
+
+      a, a:visited {
+        color: #FF4136;
+        text-decoration: none;
+      }
+
+      a:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}
+
+#data-privacy, #terms {
+  p {
+    font-weight: 400;
+  }
+
+  h2, h3 {
+    color: #FF4136;
+  }
+
+  a, a:visited {
+    color: #FF4136;
+  }
+
+  a:hover {
+    color: #333;
+  }
 }
