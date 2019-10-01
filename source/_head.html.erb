@@ -14,8 +14,7 @@
       respectDoNotTrack: true
     });
 
-    window.snowplow('trackPageView');
-
     window.snowplow('enableActivityTracking', 30, 10);
+    window.snowplow('trackPageView');
   </script>
 <% end %>
