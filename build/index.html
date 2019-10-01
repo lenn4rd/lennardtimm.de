@@ -1,4 +1,4 @@
-<!DOCTYPE html><html><head><meta charset="utf-8" /><meta content="ie=edge" http-equiv="x-ua-compatible" /><meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport" /><title>Lennard Timm &middot; Data Coach for Start-ups</title><link href="/stylesheets/site.css" rel="stylesheet" /><script src="/javascripts/cookieconsent.min.js"></script>  <script src="/javascripts/sp.js"></script>
+<!DOCTYPE html><html><head><meta charset="utf-8" /><meta content="ie=edge" http-equiv="x-ua-compatible" /><meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport" /><title>Lennard Timm &middot; Data Coach for Start-ups</title><link href="/stylesheets/site.css" rel="stylesheet" /><script src="/javascripts/cookieconsent.min.js"></script><script src="/javascripts/js.cookie.js"></script>  <script src="/javascripts/sp.js"></script>
 
   <script type="text/javascript" async=1>
     ;(function(p,l,o,w,i,n,g){if(!p[i]){p.GlobalSnowplowNamespace=p.GlobalSnowplowNamespace||[];
@@ -10,11 +10,18 @@
       appId: 'lennardtimm.de',
       cookieDomain: 'lennardtimm.de',
       forceSecureTracker: true,
-      respectDoNotTrack: true
+      respectDoNotTrack: true,
+      respectOptOutCookie: true
     });
 
-    window.snowplow('enableActivityTracking', 30, 10);
-    window.snowplow('trackPageView');
+    window.snowplow('setOptOutCookie', 'sp_optout');
+
+    var enabled = Cookies.get('sp_optout') === undefined;
+
+    if (enabled) {
+      window.snowplow('enableActivityTracking', 30, 10);
+      window.snowplow('trackPageView');
+    }
   </script>
 </head><body><div class="flex flex-wrap"><section class="w-100 pa5 pa6-l" id="who"><h1 class="f1-ns f3">Hi, I'm Lennard.<br /><br />I'm a Data Coach.</h1></section><section class="w-100 pa5 pa6-l f1-ns f3" id="what"><p>I help companies solve business problems through analytics.</p><p>Together we review and improve your data & analytics stack and establish a data-driven culture.</p></section><section class="w-100 pa5 pa6-l f1-ns f3" id="how"><p>Just like an agile coach helps development teams becoming great,<br />
 I'll help your data team, your analysts, your marketers to leverage all data.</p></section><section class="w-100 pa5 pa6-l f1-ns f3" id="recent-0"><p>I have been working in data & analytics for the last 3 years:</p></section><section class="w-100 pa5 pa6-l f1-ns f3" id="recent-1"><p>I was the first Data Engineer at
@@ -38,6 +45,26 @@ window.cookieconsent.initialise({
     "link": "View Privacy Policy",
     "href": "/privacy-policy"
   },
+  "type": "opt-in",
+
+  onStatusChange: function(status, chosenBefore) {
+    var type = this.options.type;
+    var didConsent = this.hasConsented();
+
+    // Enable cookies
+    if (type == 'opt-in' && didConsent) {
+      Cookies.remove('sp_optout');
+    }
+  },
+
+  onRevokeChoice: function() {
+    var type = this.options.type;
+
+    // Disable cookies
+    if (type == 'opt-in') {
+      Cookies.set('sp_optout', 'true', { expires: 365 });
+    }
+  }
 });
 </script>
 </body></html>

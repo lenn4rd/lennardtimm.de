@@ -1,4 +1,4 @@
-<!DOCTYPE html><html><head><meta charset="utf-8" /><meta content="ie=edge" http-equiv="x-ua-compatible" /><meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport" /><title>Impressum &middot; lennardtimm.de</title><link href="/stylesheets/site.css" rel="stylesheet" /><script src="/javascripts/cookieconsent.min.js"></script>  <script src="/javascripts/sp.js"></script>
+<!DOCTYPE html><html><head><meta charset="utf-8" /><meta content="ie=edge" http-equiv="x-ua-compatible" /><meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport" /><title>Impressum &middot; lennardtimm.de</title><link href="/stylesheets/site.css" rel="stylesheet" /><script src="/javascripts/cookieconsent.min.js"></script><script src="/javascripts/js.cookie.js"></script>  <script src="/javascripts/sp.js"></script>
 
   <script type="text/javascript" async=1>
     ;(function(p,l,o,w,i,n,g){if(!p[i]){p.GlobalSnowplowNamespace=p.GlobalSnowplowNamespace||[];
@@ -10,11 +10,18 @@
       appId: 'lennardtimm.de',
       cookieDomain: 'lennardtimm.de',
       forceSecureTracker: true,
-      respectDoNotTrack: true
+      respectDoNotTrack: true,
+      respectOptOutCookie: true
     });
 
-    window.snowplow('enableActivityTracking', 30, 10);
-    window.snowplow('trackPageView');
+    window.snowplow('setOptOutCookie', 'sp_optout');
+
+    var enabled = Cookies.get('sp_optout') === undefined;
+
+    if (enabled) {
+      window.snowplow('enableActivityTracking', 30, 10);
+      window.snowplow('trackPageView');
+    }
   </script>
 </head><body><div class="flex flex-wrap" id="terms"><div class="w-100 ph3 ph4-m ph5-l"><p class="f5"><a class="return-to" href="/"><span>⬅︎</span> Return to front page</a></p></div><div class="w-100 ph3 ph4-m ph5-l"><h1>Impressum</h1><h3>Angaben gemäß § 5 TMG</h3><p>Lennard Timm<br />Stubbenkammerstr. 5<br />10437 Berlin</p></div><div class="w-100 ph3 ph4-m ph5-l"><h3>Kontakt</h3><p class="f5">E-Mail: <a href="mailto:hello@lennardtimm.de">hello@lennardtimm.de</a></p></div><div class="w-100 ph3 ph4-m ph5-l"><h3>Umsatzsteuer-ID</h3><p>Umsatzsteuer-Identifikationsnummer gemäß § 27a Umsatzsteuergesetz:</p><p>DE301512251</p></div><div class="w-100 ph3 ph4-m ph5-l"><p>Wir sind nicht bereit oder verpflichtet, an Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle teilzunehmen.</p></div></div><div class="w-100 pv3 pv5-ns center"><footer class="tc"><ul class="f4-ns f6"><li><a href="/impressum/">Impressum</a></li><li><a href="/privacy-policy/">Privacy Policy</a></li></ul></footer></div><div class="w-100 pb7 pb6-m pb0-ns"><!-- Make way for footer links --></div><script>
 window.cookieconsent.initialise({
@@ -33,6 +40,26 @@ window.cookieconsent.initialise({
     "link": "View Privacy Policy",
     "href": "/privacy-policy"
   },
+  "type": "opt-in",
+
+  onStatusChange: function(status, chosenBefore) {
+    var type = this.options.type;
+    var didConsent = this.hasConsented();
+
+    // Enable cookies
+    if (type == 'opt-in' && didConsent) {
+      Cookies.remove('sp_optout');
+    }
+  },
+
+  onRevokeChoice: function() {
+    var type = this.options.type;
+
+    // Disable cookies
+    if (type == 'opt-in') {
+      Cookies.set('sp_optout', 'true', { expires: 365 });
+    }
+  }
 });
 </script>
 </body></html>
