@@ -8,13 +8,20 @@
     n.src=w;g.parentNode.insertBefore(n,g)}}(window,document,"script","/javascripts/sp.js","snowplow"));
 
     window.snowplow('newTracker', 'cf', '<%= ENV['COLLECTOR_HOST'] %>', {
-      appId: 'lennardtimm.de',
+      appId: '<%= build? ? "lennardtimm.de" : "lennardtimm.dev" %>',
       cookieDomain: 'lennardtimm.de',
       forceSecureTracker: true,
-      respectDoNotTrack: true
+      respectDoNotTrack: true,
+      respectOptOutCookie: true
     });
 
-    window.snowplow('enableActivityTracking', 30, 10);
-    window.snowplow('trackPageView');
+    window.snowplow('setOptOutCookie', 'sp_optout');
+
+    var enabled = Cookies.get('sp_optout') === undefined;
+
+    if (enabled) {
+      window.snowplow('enableActivityTracking', 30, 10);
+      window.snowplow('trackPageView');
+    }
   </script>
 <% end %>
