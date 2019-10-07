@@ -17,11 +17,17 @@
 
     window.snowplow('setOptOutCookie', 'sp_optout');
 
-    var enabled = Cookies.get('sp_optout') === undefined;
+    window.trackWhenEnabled = function() {
+      var enabled = Cookies.get('cookieconsent_status') === 'allow' &&
+        Cookies.get('sp_optout') === undefined;
 
-    if (enabled) {
-      window.snowplow('enableActivityTracking', 30, 10);
-      window.snowplow('trackPageView');
-    }
+      if (enabled) {
+        window.snowplow('enableActivityTracking', 30, 10);
+        window.snowplow('trackPageView');
+      }
+    };
+
+    window.trackWhenEnabled();
+
   </script>
 <% end %>

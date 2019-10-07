@@ -24,6 +24,7 @@ window.cookieconsent.initialise({
     // Enable cookies
     if (type == 'opt-in' && didConsent) {
       Cookies.remove('sp_optout');
+      window.trackWhenEnabled();
     }
   },
 

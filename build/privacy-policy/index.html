@@ -16,12 +16,18 @@
 
     window.snowplow('setOptOutCookie', 'sp_optout');
 
-    var enabled = Cookies.get('sp_optout') === undefined;
+    window.trackWhenEnabled = function() {
+      var enabled = Cookies.get('cookieconsent_status') === 'allow' &&
+        Cookies.get('sp_optout') === undefined;
 
-    if (enabled) {
-      window.snowplow('enableActivityTracking', 30, 10);
-      window.snowplow('trackPageView');
-    }
+      if (enabled) {
+        window.snowplow('enableActivityTracking', 30, 10);
+        window.snowplow('trackPageView');
+      }
+    };
+
+    window.trackWhenEnabled();
+
   </script>
 </head><body><div class="flex flex-wrap" id="data-privacy"><div class="w-100 ph3 ph4-m ph5-l"><p class="f5"><a class="return-to" href="/"><span>⬅︎</span> Return to front page</a></p></div><div class="w-100 pa3 pa4-m pa5-l"><h1>Privacy Policy</h1><h2>1. An overview of data protection</h2><h3>General information</h3><p>The following information will provide you with an easy to navigate overview of what will happen with your personal data when you visit this website. The term ”personal data” comprises all data that can be used to personally identify you. For detailed information about the subject matter of data protection, please consult our Data Protection Declaration, which we have included beneath this copy.</p><h3>Data recording on this website</h3><p><strong>Who is the responsible party for the recording of data on this website (i.e. the ”controller”)?</strong></p><p>The data on this website is processed by the operator of the website, whose contact information is available under section ”Information Required by Law” on this website.</p><p><strong>How do we record your data?</strong></p><p>We collect your data as a result of your sharing of your data with us. This may, for instance be information you enter into our contact form.</p><p>Our IT systems automatically record other data when you visit our website. This data comprises primarily technical information (e.g. web browser, operating system or time the site was accessed). This information is recorded automatically when you access this website.</p><p><strong>What are the purposes we use your data for?</strong></p><p>A portion of the information is generated to guarantee the error free provision of the website. Other data may be used to analyse your user patterns.</p><p><strong>What rights do you have as far as your information is concerned?</strong></p><p>You have the right to receive information about the source, recipients and purposes of your archived personal data at any time without having to pay a fee for such disclosures. You also have the right to demand that your data are rectified or eradicated. Please do not hesitate to contact us at any time under the address disclosed in section ”Information Required by Law” on this website if you have questions about this or any other data protection related issues. You also have the right to log a complaint with the competent supervising agency.</p><p>Moreover, under certain circumstances, you have the right to demand the restriction of the processing of your personal data. For details, please consult the Data Protection Declaration under section ”Right to Restriction of Data Processing.”</p><h3>Analysis tools and tools provided by third parties</h3><p>There is a possibility that your browsing patterns will be statistically analysed when your visit this website. Such analyses are performed primarily with cookies and with what we refer to as analysis programmes. As a rule, the analyses of your browsing patterns are conducted anonymously; i.e. the browsing patterns cannot be traced back to you.</p><p>You have the option to object to such analyses or you can prevent their performance by not using certain tools. For detailed information about the tools and about your options to object, please consult our Data Protection Declaration below.</p><h2>2. General information and mandatory information</h2><h3>Data protection</h3><p>The operators of this website and its pages take the protection of your personal data very seriously. Hence, we handle your personal data as confidential information and in compliance with the statutory data protection regulations and this Data Protection Declaration.</p><p>Whenever you use this website, a variety of personal information will be collected. Personal data comprises data that can be used to personally identify you. This Data Protection Declaration explains which data we collect as well as the purposes we use this data for. It also explains how, and for which purpose the information is collected.</p><p>We herewith advise you that the transmission of data via the Internet (i.e. through e-mail communications) may be prone to security gaps. It is not possible to completely protect data against third party access.</p><h3>Information about the responsible party (referred to as the ”controller” in the GDPR)</h3><p>The data processing controller on this website is:</p><p>Lennard Timm<br />
 Stubbenkammerstr. 5<br />
@@ -52,6 +58,7 @@ window.cookieconsent.initialise({
     // Enable cookies
     if (type == 'opt-in' && didConsent) {
       Cookies.remove('sp_optout');
+      window.trackWhenEnabled();
     }
   },
 

@@ -16,12 +16,18 @@
 
     window.snowplow('setOptOutCookie', 'sp_optout');
 
-    var enabled = Cookies.get('sp_optout') === undefined;
+    window.trackWhenEnabled = function() {
+      var enabled = Cookies.get('cookieconsent_status') === 'allow' &&
+        Cookies.get('sp_optout') === undefined;
 
-    if (enabled) {
-      window.snowplow('enableActivityTracking', 30, 10);
-      window.snowplow('trackPageView');
-    }
+      if (enabled) {
+        window.snowplow('enableActivityTracking', 30, 10);
+        window.snowplow('trackPageView');
+      }
+    };
+
+    window.trackWhenEnabled();
+
   </script>
 </head><body><div class="flex flex-wrap"><section class="w-100 pa5 pa6-l" id="who"><h1 class="f1-ns f3">Hi, I'm Lennard.<br /><br />I'm a Data Coach.</h1></section><section class="w-100 pa5 pa6-l f1-ns f3" id="what"><p>I help companies solve business problems through analytics.</p><p>Together we review and improve your data & analytics stack and establish a data-driven culture.</p></section><section class="w-100 pa5 pa6-l f1-ns f3" id="how"><p>Just like an agile coach helps development teams becoming great,<br />
 I'll help your data team, your analysts, your marketers to leverage all data.</p></section><section class="w-100 pa5 pa6-l f1-ns f3" id="recent-0"><p>I have been working in data & analytics for the last 3 years:</p></section><section class="w-100 pa5 pa6-l f1-ns f3" id="recent-1"><p>I was the first Data Engineer at
@@ -54,6 +60,7 @@ window.cookieconsent.initialise({
     // Enable cookies
     if (type == 'opt-in' && didConsent) {
       Cookies.remove('sp_optout');
+      window.trackWhenEnabled();
     }
   },
 
