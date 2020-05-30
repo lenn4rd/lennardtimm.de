@@ -8,7 +8,7 @@
     n.src=w;g.parentNode.insertBefore(n,g)}}(window,document,"script","<%= asset_path :js, 'sp.js' %>","snowplow"));
 
     window.snowplow('newTracker', 'cf', '<%= ENV['COLLECTOR_HOST'] %>', {
-      appId: '<%= build? ? "lennardtimm.de" : "lennardtimm.dev" %>',
+      appId: '<%= build? ? "lennardtimm.de" : "lennardtimm.development" %>',
       cookieDomain: 'lennardtimm.de',
       forceSecureTracker: true,
       respectDoNotTrack: true,
