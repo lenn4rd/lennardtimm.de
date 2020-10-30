@@ -5,6 +5,7 @@ SitemapGenerator::Sitemap.default_host = 'https://lennardtimm.de'
 SitemapGenerator::Sitemap.public_path = 'build/'
 
 SitemapGenerator::Sitemap.create do
+  add '/', changefreq: 'monthly'
   add '/impressum', changefreq: 'monthly'
   add '/privacy-policy', changefreq: 'monthly'
 end
