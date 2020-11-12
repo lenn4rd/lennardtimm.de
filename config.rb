@@ -8,6 +8,7 @@ activate :autoprefixer do |prefix|
 end
 
 activate :directory_indexes
+activate :dotenv
 activate :livereload
 
 # Layouts
