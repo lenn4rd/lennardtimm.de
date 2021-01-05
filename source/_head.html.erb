@@ -7,7 +7,7 @@
     };p[i].q=p[i].q||[];n=l.createElement(o);g=l.getElementsByTagName(o)[0];n.async=1;
     n.src=w;g.parentNode.insertBefore(n,g)}}(window,document,"script","<%= asset_path :js, 'sp.js' %>","snowplow"));
 
-    window.snowplow('newTracker', 'cf', '<%= ENV['COLLECTOR_HOST'] %>', {
+    window.snowplow('newTracker', 'cf', '<%= ENV['SP_COLLECTOR_HOST'] %>', {
       appId: '<%= build? ? "lennardtimm.de" : "lennardtimm.development" %>',
       cookieDomain: 'lennardtimm.de',
       forceSecureTracker: true,
