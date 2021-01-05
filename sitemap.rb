@@ -6,6 +6,7 @@ SitemapGenerator::Sitemap.public_path = 'build/'
 
 SitemapGenerator::Sitemap.create do
   add '/impressum', changefreq: 'monthly'
+  add '/playbook', changefreq: 'weekly'
   add '/privacy-policy', changefreq: 'monthly'
 end
 
