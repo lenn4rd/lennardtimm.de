@@ -18,11 +18,15 @@ a.return-to {
 }
 
 @media screen and (min-width: 20em) {
+  h4 a {
+    text-decoration-thickness: 0.15rem;
+  }
+
   a {
     text-decoration-thickness: 0.15rem;
   }
 
-  p.f4 a, .f4-ns a {
+  p.f2 a, p.f4 a, .f4-ns a {
     text-decoration-thickness: 0.12rem;
   }
 
@@ -32,11 +36,15 @@ a.return-to {
 }
 
 @media screen and (min-width: 30em) and (max-width: 60em) {
+  h4 a {
+    text-decoration-thickness: 0.3rem;
+  }
+
   a {
     text-decoration-thickness: 0.3rem;
   }
 
-  p.f4 a {
+  p.f2 a, p.f4 a {
     text-decoration-thickness: 0.24rem;
   }
 
@@ -46,11 +54,15 @@ a.return-to {
 }
 
 @media screen and (min-width: 60em) {
+  h4 a {
+    text-decoration-thickness: 0.24rem;
+  }
+
   a {
     text-decoration-thickness: 0.4rem;
   }
 
-  p.f4 a {
+  p.f2 a, p.f4 a {
     text-decoration-thickness: 0.32rem;
   }
 
@@ -161,6 +173,12 @@ footer {
         text-decoration: underline;
       }
     }
+  }
+}
+
+#signup-form {
+  label, input[type=text], input[type=email], input[type=submit] {
+    font-size: 1.5rem;
   }
 }
 

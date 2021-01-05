@@ -11,3 +11,5 @@ gem 'middleman-livereload'
 gem 'slim'
 
 gem 'sitemap_generator'
+
+gem 'thumbtack'

@@ -1,0 +1,63 @@
+---
+title: The Data Strategist's Playbook &middot; curated by Lennard Timm
+---
+
+div.flex.flex-wrap
+  section#who.w-100.pa5.pa6-l
+    p.f5.mb6-l
+      a.return-to href="/"
+        span ⬅︎ Return to front page
+
+    h1.f1-ns.f3
+      |
+        The Data Strategist's Playbook
+
+    p.f2-ns.f4 Your weekly collection of recipes to help you define a data strategy and add value to your business.
+
+  section#what.w-100.pa5.pa6-l.f2-ns.f4
+    p I curate and share content like blog posts, opinion pieces and recordings from conference talks to help you find your way in this constantly changing ecosystem. I'll publish a new issue every Wednesday and promise to keep it short and relevant.
+
+    p In this newsletter, you'll read about:
+
+    ul
+      li how to define your data strategy
+      li why having a roadmap is crucial
+      li what data story telling is and why it's so important
+      li how to improve relationships with stakeholders and senior management
+      li why little changes to your data team setup can make a huge difference
+      li which data visualisations will make everyone wow
+      li how to leverage data engineering best practices
+
+  section.w-100.ph5.ph6-l.pv4.f2-ns.f4
+    h3.f1-ns.f3 Sounds like super useful content?
+
+    p Fill in your email below and join the circle of data strategists so you won't miss what industry leaders have to say about these topics. New issues will be published every Wednesday.
+
+    #signup-form.w-two-thirds
+      = partial :playbook_signup_form
+
+  section#experience.w-100.ph5.ph6-l.pv5.f2-ns.f4
+    h3.f1-ns.f3 Highlights
+
+    p Here are the some of the most popular articles from recent episodes:
+
+  section#highlights.w100.ph5.ph6-l.pv4.f3-ns.f5
+    - data.playbook.each do |post|
+      .entry.ph5-l
+        h4= link_to(post.description, post.href, target: '_blank')
+
+        p.f4.mt-0 = post.extended
+
+  section.w100.ph5.ph6-l.pv4.f2-ns.f4
+    p
+      a[href="https://us19.campaign-archive.com/home/?u=f37259e6bf8d8629e69b343af&id=51a1bc1386" target="_blank"] Go to the archives
+      |  to see all previous issues and articles.
+
+  section#recent-1.w-100.ph5.ph6-l.pv4.f2-ns.f4
+    h3.f1-ns.f3 Join the circle
+
+    p Fill in your email below and join the circle of data strategists so you won't miss upcoming issues about data strategy, powerful analytics tips and tricks, and industry best practices. New issues will be published every Wednesday.
+
+  section.w-100.ph5.ph6-l.pv4
+    #signup-form.w-two-thirds
+      = partial :playbook_signup_form

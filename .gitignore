@@ -3,4 +3,5 @@
 .env
 .sass-cache
 
+data/playbook.yml
 node_modules/
