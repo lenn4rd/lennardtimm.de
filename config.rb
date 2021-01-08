@@ -11,6 +11,13 @@ activate :directory_indexes
 activate :dotenv
 activate :livereload
 
+# Helpers
+helpers do
+  def current_host
+    build? ? 'https://lennardtimm.de' : 'https://lennardtimm.development'
+  end
+end
+
 # Layouts
 # https://middlemanapp.com/basics/layouts/
 
