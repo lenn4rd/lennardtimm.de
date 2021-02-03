@@ -1,136 +1,321 @@
-<!DOCTYPE html><html lang="en"><head><meta charset="utf-8" /><meta content="ie=edge" http-equiv="x-ua-compatible" /><meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport" /><meta content="Lennard Timm" name="author" /><meta content="Your weekly collection of recipes to help you define a data strategy and add value to your business." name="description" property="og:description" /><meta content="/images/datacoach-a56be994.png" name="image" property="og:image" /><meta content="The Data Strategist's Playbook &middot; curated by Lennard Timm" name="title" property="og:title" /><meta content="628" property="og:image:height" /><meta content="/images/datacoach-a56be994.png" property="og:image:secure_url" /><meta content="/images/datacoach-a56be994.png" property="og:image:url" /><meta content="1200" property="og:image:width" /><meta content="en_GB" property="og:locale" /><meta content="website" property="og:type" /><meta content="2021-01-15T23:08:55Z" property="og:updated_time" /><meta content="https://lennardtimm.de/playbook/" property="og:url" /><title>The Data Strategist's Playbook &middot; curated by Lennard Timm</title><link href="/stylesheets/site-615f071e.css" rel="stylesheet" /><script src="/javascripts/cookieconsent.min-9cbada4b.js"></script><script src="/javascripts/js.cookie-e3ba4c7d.js"></script>  <script src="/javascripts/sp-5dceffef.js"></script>
-
-  <script type="text/javascript" async=1>
-    ;(function(p,l,o,w,i,n,g){if(!p[i]){p.GlobalSnowplowNamespace=p.GlobalSnowplowNamespace||[];
-    p.GlobalSnowplowNamespace.push(i);p[i]=function(){(p[i].q=p[i].q||[]).push(arguments)
-    };p[i].q=p[i].q||[];n=l.createElement(o);g=l.getElementsByTagName(o)[0];n.async=1;
-    n.src=w;g.parentNode.insertBefore(n,g)}}(window,document,"script","/javascripts/sp-5dceffef.js","snowplow"));
-
-    window.snowplow('newTracker', 'cf', 'sp-collector.hndw.co', {
-      appId: 'lennardtimm.de',
-      cookieDomain: 'lennardtimm.de',
-      forceSecureTracker: true,
-      respectDoNotTrack: true,
-      respectOptOutCookie: true
-    });
-
-    window.snowplow('setOptOutCookie', 'sp_optout');
-
-    window.trackWhenEnabled = function() {
-      var enabled = Cookies.get('cookieconsent_status') === 'allow' &&
-        Cookies.get('sp_optout') === undefined;
-
-      if (enabled) {
-        window.snowplow('enableActivityTracking', 30, 10);
-        window.snowplow('trackPageView');
-      }
-    };
-
-    window.trackWhenEnabled();
-
-  </script>
-</head><body><div class="flex flex-wrap"><section class="w-100 pa5 pa6-l" id="who"><p class="f5 mb6-l"><a class="return-to" href="/"><span>⬅︎ Return to front page</span></a></p><h1 class="f1-ns f3">The Data Strategist's Playbook</h1><p class="f2-ns f4">Your weekly collection of recipes to help you define a data strategy and add value to your business.</p></section><section class="w-100 pa5 pa6-l f2-ns f4" id="what"><p>I curate and share content like blog posts, opinion pieces and recordings from conference talks to help you find your way in this constantly changing ecosystem. I'll publish a new issue every Wednesday and promise to keep it short and relevant.</p><p>In this newsletter, you'll read about:</p><ul><li>how to define your data strategy</li><li>why having a roadmap is crucial</li><li>what data story telling is and why it's so important</li><li>how to improve relationships with stakeholders and senior management</li><li>why little changes to your data team setup can make a huge difference</li><li>which data visualisations will make everyone wow</li><li>how to leverage data engineering best practices</li></ul></section><section class="w-100 ph5 ph6-l pv4 f2-ns f4"><h3 class="f1-ns f3">Sounds like super useful content?</h3><p>Fill in your email below and join the circle of data strategists so you won't miss what industry leaders have to say about these topics. New issues will be published every Wednesday.</p><div class="w-two-thirds" id="signup-form"><!-- Begin Mailchimp Signup Form -->
-<link href="//cdn-images.mailchimp.com/embedcode/classic-10_7.css" rel="stylesheet" type="text/css">
-<style type="text/css">
-	#mc_embed_signup{background:#fff; clear:left; font:14px Helvetica,Arial,sans-serif; }
-	/* Add your own Mailchimp form style overrides in your site stylesheet or in this style block.
-	   We recommend moving this block and the preceding CSS link to the HEAD of your HTML file. */
-</style>
-<div id="mc_embed_signup">
-<form action="https://lennardtimm.us19.list-manage.com/subscribe/post?u=f37259e6bf8d8629e69b343af&amp;id=51a1bc1386" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
-    <div id="mc_embed_signup_scroll">
-
-<div class="indicates-required"><span class="asterisk">*</span> indicates required</div>
-<div class="mc-field-group">
-	<label for="mce-FNAME">First Name </label>
-	<input type="text" value="" name="FNAME" class="" id="mce-FNAME">
-</div>
-<div class="mc-field-group">
-	<label for="mce-EMAIL">Email Address  <span class="asterisk">*</span>
-</label>
-	<input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL">
-</div>
-	<div id="mce-responses" class="clear">
-		<div class="response" id="mce-error-response" style="display:none"></div>
-		<div class="response" id="mce-success-response" style="display:none"></div>
-	</div>    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
-    <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_f37259e6bf8d8629e69b343af_51a1bc1386" tabindex="-1" value=""></div>
-    <div class="clear"><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button"></div>
-    </div>
-</form>
-</div>
-<script type='text/javascript' src='//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js'></script><script type='text/javascript'>(function($) {window.fnames = new Array(); window.ftypes = new Array();fnames[1]='FNAME';ftypes[1]='text';fnames[0]='EMAIL';ftypes[0]='email';}(jQuery));var $mcj = jQuery.noConflict(true);</script>
-<!--End mc_embed_signup-->
-</div></section><section class="w-100 ph5 ph6-l pv5 f2-ns f4" id="experience"><h3 class="f1-ns f3">Highlights</h3><p>Here are the some of the most popular articles from recent episodes:</p></section><section class="w100 ph5 ph6-l pv4 f3-ns f5" id="highlights"><div class="entry ph5-l"><h4><a href="https://medium.com/latentview-data-services/data-platforms-for-2020-beyond-fca127cbf787" target="_blank">Data Platforms for 2020 & Beyond</a></h4><p class="f4 mt-0">An interesting argument: data lakes are created the FOMO way; useful only to a handful of specialists in your organisation because the data lacks clarity. The author describes why domain-specific data services are the logical successor to data lakes.</p></div><div class="entry ph5-l"><h4><a href="https://towardsdatascience.com/numbers-every-data-engineer-should-know-cc5c1a0bc3ec" target="_blank">Numbers Every Data Engineer Should Know</a></h4><p class="f4 mt-0">A list of data pipeline-related metrics that help understand whether or not all components in your data infrastructure are running nicely or should be closely monitored and improved upon.</p></div><div class="entry ph5-l"><h4><a href="https://medium.com/weareservian/why-data-engineering-needs-automated-testing-a37a0844d7db" target="_blank">Why Great Data Engineering Needs Automated Testing</a></h4><p class="f4 mt-0">Even though writing tests for ever-changing data isn't as easy and straightforward as for regular code, it shouldn't be an excuse to skip automated testing. Don't aim for 100% coverage; start assuring your riskiest metrics are always correct and work your way to the (data) source.</p></div><div class="entry ph5-l"><h4><a href="https://medium.com/@ke_73209/building-a-data-driven-culture-one-step-at-a-time-85409c164630" target="_blank">Building A Data Driven Culture — One Step at a Time</a></h4><p class="f4 mt-0">This is interesting: when creating a data-driven culture, pick a problem that is small and easy to solve, make sure the solution is not only presented but implemented, pick a slightly bigger problem and repeat.</p></div><div class="entry ph5-l"><h4><a href="https://medium.com/airbnb-engineering/data-quality-at-airbnb-e582465f3ef7" target="_blank">Data Quality at Airbnb. Part 1 — Rebuilding at Scale</a></h4><p class="f4 mt-0">Rewriting software or rebuilding systems from scratch is unpopular with managers because it's expensive and at first glance the result is identical to what you already have when changes happen under the hood. Airbnb did rebuild their data infrastructure to ensure higher quality data and share their approach.</p></div><div class="entry ph5-l"><h4><a href="https://medium.com/snaptravel/how-should-our-company-structure-our-data-team-e71f6846024d" target="_blank">How should our company structure our data team?</a></h4><p class="f4 mt-0">There a few ways to set up data teams with data engineers and data analysts and their colleagues in other teams. In this interesting case study, we learn how travel start-up Snaptravel iterated over classic models like centralised and embedded teams and what their ideal team structure looks like.</p></div></section><section class="w100 ph5 ph6-l pv4 f2-ns f4"><p><a href="https://us19.campaign-archive.com/home/?u=f37259e6bf8d8629e69b343af&id=51a1bc1386" target="_blank">Go to the archives</a> to see all previous issues and articles.</p></section><section class="w-100 ph5 ph6-l pv4 f2-ns f4" id="recent-1"><h3 class="f1-ns f3">Join the circle</h3><p>Fill in your email below and join the circle of data strategists so you won't miss upcoming issues about data strategy, powerful analytics tips and tricks, and industry best practices. New issues will be published every Wednesday.</p></section><section class="w-100 ph5 ph6-l pv4"><div class="w-two-thirds" id="signup-form"><!-- Begin Mailchimp Signup Form -->
-<link href="//cdn-images.mailchimp.com/embedcode/classic-10_7.css" rel="stylesheet" type="text/css">
-<style type="text/css">
-	#mc_embed_signup{background:#fff; clear:left; font:14px Helvetica,Arial,sans-serif; }
-	/* Add your own Mailchimp form style overrides in your site stylesheet or in this style block.
-	   We recommend moving this block and the preceding CSS link to the HEAD of your HTML file. */
-</style>
-<div id="mc_embed_signup">
-<form action="https://lennardtimm.us19.list-manage.com/subscribe/post?u=f37259e6bf8d8629e69b343af&amp;id=51a1bc1386" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
-    <div id="mc_embed_signup_scroll">
-
-<div class="indicates-required"><span class="asterisk">*</span> indicates required</div>
-<div class="mc-field-group">
-	<label for="mce-FNAME">First Name </label>
-	<input type="text" value="" name="FNAME" class="" id="mce-FNAME">
-</div>
-<div class="mc-field-group">
-	<label for="mce-EMAIL">Email Address  <span class="asterisk">*</span>
-</label>
-	<input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL">
-</div>
-	<div id="mce-responses" class="clear">
-		<div class="response" id="mce-error-response" style="display:none"></div>
-		<div class="response" id="mce-success-response" style="display:none"></div>
-	</div>    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
-    <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_f37259e6bf8d8629e69b343af_51a1bc1386" tabindex="-1" value=""></div>
-    <div class="clear"><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button"></div>
-    </div>
-</form>
-</div>
-<script type='text/javascript' src='//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js'></script><script type='text/javascript'>(function($) {window.fnames = new Array(); window.ftypes = new Array();fnames[1]='FNAME';ftypes[1]='text';fnames[0]='EMAIL';ftypes[0]='email';}(jQuery));var $mcj = jQuery.noConflict(true);</script>
-<!--End mc_embed_signup-->
-</div></section></div><div class="w-100 pv3 pv5-ns center"><footer class="tc"><ul class="f4-ns f6"><li><a href="/impressum/">Impressum</a></li><li><a href="/privacy-policy/">Privacy Policy</a></li></ul></footer></div><script>
-window.cookieconsent.initialise({
-  "palette": {
-    "popup": {
-      "background": "#edeff5",
-      "text": "#838391"
-    },
-    "button": {
-      "background": "#001B44",
-      "text": "#F6FFFE"
-    }
-  },
-  "content": {
-    "dismiss": "Continue",
-    "link": "View Privacy Policy",
-    "href": "/privacy-policy"
-  },
-  "type": "opt-in",
-
-  onStatusChange: function(status, chosenBefore) {
-    var type = this.options.type;
-    var didConsent = this.hasConsented();
-
-    // Enable cookies
-    if (type == 'opt-in' && didConsent) {
-      Cookies.remove('sp_optout');
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="ie=edge" http-equiv="x-ua-compatible" />
+    <meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport" />
+    <meta content="Lennard Timm" name="author" />
+    <meta content="Your weekly collection of recipes to help you define a data strategy and add value to your business." name="description" property="og:description" />
+    <meta content="/images/datacoach-a56be994.png" name="image" property="og:image" />
+    <meta content="The Data Strategist's Playbook &middot; curated by Lennard Timm" name="title" property="og:title" />
+    <meta content="628" property="og:image:height" />
+    <meta content="/images/datacoach-a56be994.png" property="og:image:secure_url" />
+    <meta content="/images/datacoach-a56be994.png" property="og:image:url" />
+    <meta content="1200" property="og:image:width" />
+    <meta content="en_GB" property="og:locale" />
+    <meta content="website" property="og:type" />
+    <meta content="2021-02-03T11:14:42Z" property="og:updated_time" />
+    <meta content="https://lennardtimm.de/playbook/" property="og:url" />
+    <link href="/favicon.png" rel="icon" sizes="32x32" type="image/png" />
+    <link href="/favicon.png" rel="icon" sizes="96x96" type="image/png" />
+    <link href="/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+    <link href="/favicon-apple-touch-144.png" rel="apple-touch-icon" sizes="144x144" />
+    <link href="/favicon-apple-touch-144.png" rel="apple-touch-icon-precomposed" sizes="144x144" />
+    <meta content="#ffffff" name="msapplication-TileColor" />
+    <meta content="/favicon-apple-touch-144.png" name="msapplication-TileImage" /><title>The Data Strategist's Playbook &middot; curated by Lennard Timm</title><link href="/stylesheets/site-615f071e.css" rel="stylesheet" /><script src="/javascripts/site-12e3a379.js"></script>
+    <script>
+      ;(function(p,l,o,w,i,n,g){if(!p[i]){p.GlobalSnowplowNamespace=p.GlobalSnowplowNamespace||[];
+      p.GlobalSnowplowNamespace.push(i);p[i]=function(){(p[i].q=p[i].q||[]).push(arguments)
+      };p[i].q=p[i].q||[];n=l.createElement(o);g=l.getElementsByTagName(o)[0];n.async=1;
+      n.src=w;g.parentNode.insertBefore(n,g)}}(window,document,"script","/javascripts/sp-5dceffef.js","snowplow"));
+      
+      window.snowplow('newTracker', 'sp', 'sp-collector.hndw.co', {
+        appId: 'lennardtimm.de',
+        cookieDomain: 'lennardtimm.de',
+        forceSecureTracker: true,
+        respectDoNotTrack: true,
+        respectOptOutCookie: true,
+        contexts: {
+          webPage: true,
+          performanceTiming: true
+        }
+      });
+      
+      window.trackWhenEnabled = function() {
+        var enabled = Cookies.get('cookieconsent_status') !== 'deny' &&
+          Cookies.get('sp_optout') === undefined;
+      
+        if (enabled) {
+          window.snowplow('enableActivityTracking', 30, 10);
+          window.snowplow('trackPageView');
+        }
+      };
+      
       window.trackWhenEnabled();
-    }
-  },
-
-  onRevokeChoice: function() {
-    var type = this.options.type;
-
-    // Disable cookies
-    if (type == 'opt-in') {
-      Cookies.set('sp_optout', 'true', { expires: 365 });
-    }
-  }
-});
-</script>
-</body></html>
+    </script>
+  </head>
+  <body>
+    <div class="flex flex-wrap">
+      <section class="w-100 pa5 pa6-l" id="who">
+        <p class="f5 mb6-l">
+          <a class="return-to" href="/"><span>⬅︎ Return to front page</span></a>
+        </p>
+        <h1 class="f1-ns f3">
+          The Data Strategist's Playbook
+        </h1>
+        <p class="f2-ns f4">
+          Your weekly collection of recipes to help you define a data strategy and add value to your business.
+        </p>
+      </section>
+      <section class="w-100 pa5 pa6-l f2-ns f4" id="what">
+        <p>
+          I curate and share content like blog posts, opinion pieces and recordings from conference talks to help you find your way in this constantly changing ecosystem. I'll publish a new issue every Wednesday and promise to keep it short and relevant.
+        </p>
+        <p>
+          In this newsletter, you'll read about:
+        </p>
+        <ul>
+          <li>
+            how to define your data strategy
+          </li>
+          <li>
+            why having a roadmap is crucial
+          </li>
+          <li>
+            what data story telling is and why it's so important
+          </li>
+          <li>
+            how to improve relationships with stakeholders and senior management
+          </li>
+          <li>
+            why little changes to your data team setup can make a huge difference
+          </li>
+          <li>
+            which data visualisations will make everyone wow
+          </li>
+          <li>
+            how to leverage data engineering best practices
+          </li>
+        </ul>
+      </section>
+      <section class="w-100 ph5 ph6-l pv4 f2-ns f4">
+        <h3 class="f1-ns f3">
+          Sounds like super useful content?
+        </h3>
+        <p>
+          Fill in your email below and join the circle of data strategists so you won't miss what industry leaders have to say about these topics. New issues will be published every Wednesday.
+        </p>
+        <div class="w-two-thirds" id="signup-form">
+          <!-- Begin Mailchimp Signup Form -->
+          <link href="//cdn-images.mailchimp.com/embedcode/classic-10_7.css" rel="stylesheet" type="text/css">
+          <style type="text/css">
+          	#mc_embed_signup{background:#fff; clear:left; font:14px Helvetica,Arial,sans-serif; }
+          	/* Add your own Mailchimp form style overrides in your site stylesheet or in this style block.
+          	   We recommend moving this block and the preceding CSS link to the HEAD of your HTML file. */
+          </style>
+          <div id="mc_embed_signup">
+          <form action="https://lennardtimm.us19.list-manage.com/subscribe/post?u=f37259e6bf8d8629e69b343af&amp;id=51a1bc1386" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+              <div id="mc_embed_signup_scroll">
+          
+          <div class="indicates-required"><span class="asterisk">*</span> indicates required</div>
+          <div class="mc-field-group">
+          	<label for="mce-FNAME">First Name </label>
+          	<input type="text" value="" name="FNAME" class="" id="mce-FNAME">
+          </div>
+          <div class="mc-field-group">
+          	<label for="mce-EMAIL">Email Address  <span class="asterisk">*</span>
+          </label>
+          	<input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL">
+          </div>
+          	<div id="mce-responses" class="clear">
+          		<div class="response" id="mce-error-response" style="display:none"></div>
+          		<div class="response" id="mce-success-response" style="display:none"></div>
+          	</div>    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+              <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_f37259e6bf8d8629e69b343af_51a1bc1386" tabindex="-1" value=""></div>
+              <div class="clear"><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button"></div>
+              </div>
+          </form>
+          </div>
+          <script type='text/javascript' src='//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js'></script><script type='text/javascript'>(function($) {window.fnames = new Array(); window.ftypes = new Array();fnames[1]='FNAME';ftypes[1]='text';fnames[0]='EMAIL';ftypes[0]='email';}(jQuery));var $mcj = jQuery.noConflict(true);</script>
+          <!--End mc_embed_signup-->
+          
+        </div>
+      </section>
+      <section class="w-100 ph5 ph6-l pv5 f2-ns f4" id="experience">
+        <h3 class="f1-ns f3">
+          Highlights
+        </h3>
+        <p>
+          Here are the some of the most popular articles from recent episodes:
+        </p>
+      </section>
+      <section class="w100 ph5 ph6-l pv4 f3-ns f5" id="highlights">
+        <div class="entry ph5-l">
+          <h4>
+            <a href="https://medium.com/latentview-data-services/data-platforms-for-2020-beyond-fca127cbf787" target="_blank">Data Platforms for 2020 & Beyond</a>
+          </h4>
+          <p class="f4 mt-0">
+            An interesting argument: data lakes are created the FOMO way; useful only to a handful of specialists in your organisation because the data lacks clarity. The author describes why domain-specific data services are the logical successor to data lakes.
+          </p>
+        </div>
+        <div class="entry ph5-l">
+          <h4>
+            <a href="https://towardsdatascience.com/numbers-every-data-engineer-should-know-cc5c1a0bc3ec" target="_blank">Numbers Every Data Engineer Should Know</a>
+          </h4>
+          <p class="f4 mt-0">
+            A list of data pipeline-related metrics that help understand whether or not all components in your data infrastructure are running nicely or should be closely monitored and improved upon.
+          </p>
+        </div>
+        <div class="entry ph5-l">
+          <h4>
+            <a href="https://medium.com/weareservian/why-data-engineering-needs-automated-testing-a37a0844d7db" target="_blank">Why Great Data Engineering Needs Automated Testing</a>
+          </h4>
+          <p class="f4 mt-0">
+            Even though writing tests for ever-changing data isn't as easy and straightforward as for regular code, it shouldn't be an excuse to skip automated testing. Don't aim for 100% coverage; start assuring your riskiest metrics are always correct and work your way to the (data) source.
+          </p>
+        </div>
+        <div class="entry ph5-l">
+          <h4>
+            <a href="https://medium.com/@ke_73209/building-a-data-driven-culture-one-step-at-a-time-85409c164630" target="_blank">Building A Data Driven Culture — One Step at a Time</a>
+          </h4>
+          <p class="f4 mt-0">
+            This is interesting: when creating a data-driven culture, pick a problem that is small and easy to solve, make sure the solution is not only presented but implemented, pick a slightly bigger problem and repeat.
+          </p>
+        </div>
+        <div class="entry ph5-l">
+          <h4>
+            <a href="https://medium.com/airbnb-engineering/data-quality-at-airbnb-e582465f3ef7" target="_blank">Data Quality at Airbnb. Part 1 — Rebuilding at Scale</a>
+          </h4>
+          <p class="f4 mt-0">
+            Rewriting software or rebuilding systems from scratch is unpopular with managers because it's expensive and at first glance the result is identical to what you already have when changes happen under the hood. Airbnb did rebuild their data infrastructure to ensure higher quality data and share their approach.
+          </p>
+        </div>
+        <div class="entry ph5-l">
+          <h4>
+            <a href="https://medium.com/snaptravel/how-should-our-company-structure-our-data-team-e71f6846024d" target="_blank">How should our company structure our data team?</a>
+          </h4>
+          <p class="f4 mt-0">
+            There a few ways to set up data teams with data engineers and data analysts and their colleagues in other teams. In this interesting case study, we learn how travel start-up Snaptravel iterated over classic models like centralised and embedded teams and what their ideal team structure looks like.
+          </p>
+        </div>
+      </section>
+      <section class="w100 ph5 ph6-l pv4 f2-ns f4">
+        <p>
+          <a href="https://us19.campaign-archive.com/home/?u=f37259e6bf8d8629e69b343af&id=51a1bc1386" target="_blank">Go to the archives</a> to see all previous issues and articles.
+        </p>
+      </section>
+      <section class="w-100 ph5 ph6-l pv4 f2-ns f4" id="recent-1">
+        <h3 class="f1-ns f3">
+          Join the circle
+        </h3>
+        <p>
+          Fill in your email below and join the circle of data strategists so you won't miss upcoming issues about data strategy, powerful analytics tips and tricks, and industry best practices. New issues will be published every Wednesday.
+        </p>
+      </section>
+      <section class="w-100 ph5 ph6-l pv4">
+        <div class="w-two-thirds" id="signup-form">
+          <!-- Begin Mailchimp Signup Form -->
+          <link href="//cdn-images.mailchimp.com/embedcode/classic-10_7.css" rel="stylesheet" type="text/css">
+          <style type="text/css">
+          	#mc_embed_signup{background:#fff; clear:left; font:14px Helvetica,Arial,sans-serif; }
+          	/* Add your own Mailchimp form style overrides in your site stylesheet or in this style block.
+          	   We recommend moving this block and the preceding CSS link to the HEAD of your HTML file. */
+          </style>
+          <div id="mc_embed_signup">
+          <form action="https://lennardtimm.us19.list-manage.com/subscribe/post?u=f37259e6bf8d8629e69b343af&amp;id=51a1bc1386" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+              <div id="mc_embed_signup_scroll">
+          
+          <div class="indicates-required"><span class="asterisk">*</span> indicates required</div>
+          <div class="mc-field-group">
+          	<label for="mce-FNAME">First Name </label>
+          	<input type="text" value="" name="FNAME" class="" id="mce-FNAME">
+          </div>
+          <div class="mc-field-group">
+          	<label for="mce-EMAIL">Email Address  <span class="asterisk">*</span>
+          </label>
+          	<input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL">
+          </div>
+          	<div id="mce-responses" class="clear">
+          		<div class="response" id="mce-error-response" style="display:none"></div>
+          		<div class="response" id="mce-success-response" style="display:none"></div>
+          	</div>    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+              <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_f37259e6bf8d8629e69b343af_51a1bc1386" tabindex="-1" value=""></div>
+              <div class="clear"><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button"></div>
+              </div>
+          </form>
+          </div>
+          <script type='text/javascript' src='//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js'></script><script type='text/javascript'>(function($) {window.fnames = new Array(); window.ftypes = new Array();fnames[1]='FNAME';ftypes[1]='text';fnames[0]='EMAIL';ftypes[0]='email';}(jQuery));var $mcj = jQuery.noConflict(true);</script>
+          <!--End mc_embed_signup-->
+          
+        </div>
+      </section>
+    </div><div class="w-100 pv3 pv5-ns center">
+      <footer class="tc">
+        <ul class="f4-ns f6">
+          <li>
+            <a href="/impressum/">Impressum</a>
+          </li>
+          <li>
+            <a href="/privacy-policy/">Privacy Policy</a>
+          </li>
+        </ul>
+      </footer>
+    </div><script type="text/javascript">
+      window.cookieconsent.initialise({
+        "palette": {
+          "popup": {
+            "background": "#edeff5",
+            "text": "#838391"
+          },
+          "button": {
+            "background": "#001B44",
+            "text": "#F6FFFE"
+          }
+        },
+        "content": {
+          "dismiss": "Continue",
+          "link": "View Privacy Policy",
+          "href": "/privacy-policy"
+        },
+        "type": "opt-out",
+    
+        onStatusChange: function(status, chosenBefore) {
+          var type = this.options.type;
+          var didConsent = this.hasConsented();
+    
+          // Enable cookies
+          if (type == 'opt-in' && didConsent) {
+            Cookies.remove('sp_optout');
+            window.trackWhenEnabled();
+          }
+        },
+    
+        onRevokeChoice: function() {
+          var type = this.options.type;
+    
+          // Disable cookies
+          if (type == 'opt-in') {
+            Cookies.set('sp_optout', 'true', { expires: 365 });
+          }
+        }
+      });
+    </script>
+    
+    <script type="text/javascript">
+      _linkedin_partner_id = "2706818";
+      window._linkedin_data_partner_ids = window._linkedin_data_partner_ids || [];
+      window._linkedin_data_partner_ids.push(_linkedin_partner_id);
+    </script>
+    <script type="text/javascript">
+      (function(){var s = document.getElementsByTagName("script")[0];
+      var b = document.createElement("script");
+      b.type = "text/javascript";b.async = true;
+      b.src = "https://snap.licdn.com/li.lms-analytics/insight.min.js";
+      s.parentNode.insertBefore(b, s);})();
+    </script>
+    <noscript>
+      <img height="1" width="1" style="display:none;" alt="" src="https://px.ads.linkedin.com/collect/?pid=2706818&fmt=gif" />
+    </noscript>
+    
+  </body>
+</html>

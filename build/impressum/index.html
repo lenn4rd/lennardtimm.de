@@ -1,72 +1,168 @@
-<!DOCTYPE html><html lang="en"><head><meta charset="utf-8" /><meta content="ie=edge" http-equiv="x-ua-compatible" /><meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport" /><meta content="Lennard Timm" name="author" /><meta content="I help companies solve business problems through analytics. Together we review and improve your data & analytics stack and establish a data-driven culture." name="description" property="og:description" /><meta content="/images/datacoach-a56be994.png" name="image" property="og:image" /><meta content="Impressum &middot; lennardtimm.de" name="title" property="og:title" /><meta content="628" property="og:image:height" /><meta content="/images/datacoach-a56be994.png" property="og:image:secure_url" /><meta content="/images/datacoach-a56be994.png" property="og:image:url" /><meta content="1200" property="og:image:width" /><meta content="en_GB" property="og:locale" /><meta content="website" property="og:type" /><meta content="2021-01-15T23:08:54Z" property="og:updated_time" /><meta content="https://lennardtimm.de/impressum/" property="og:url" /><title>Impressum &middot; lennardtimm.de</title><link href="/stylesheets/site-615f071e.css" rel="stylesheet" /><script src="/javascripts/cookieconsent.min-9cbada4b.js"></script><script src="/javascripts/js.cookie-e3ba4c7d.js"></script>  <script src="/javascripts/sp-5dceffef.js"></script>
-
-  <script type="text/javascript" async=1>
-    ;(function(p,l,o,w,i,n,g){if(!p[i]){p.GlobalSnowplowNamespace=p.GlobalSnowplowNamespace||[];
-    p.GlobalSnowplowNamespace.push(i);p[i]=function(){(p[i].q=p[i].q||[]).push(arguments)
-    };p[i].q=p[i].q||[];n=l.createElement(o);g=l.getElementsByTagName(o)[0];n.async=1;
-    n.src=w;g.parentNode.insertBefore(n,g)}}(window,document,"script","/javascripts/sp-5dceffef.js","snowplow"));
-
-    window.snowplow('newTracker', 'cf', 'sp-collector.hndw.co', {
-      appId: 'lennardtimm.de',
-      cookieDomain: 'lennardtimm.de',
-      forceSecureTracker: true,
-      respectDoNotTrack: true,
-      respectOptOutCookie: true
-    });
-
-    window.snowplow('setOptOutCookie', 'sp_optout');
-
-    window.trackWhenEnabled = function() {
-      var enabled = Cookies.get('cookieconsent_status') === 'allow' &&
-        Cookies.get('sp_optout') === undefined;
-
-      if (enabled) {
-        window.snowplow('enableActivityTracking', 30, 10);
-        window.snowplow('trackPageView');
-      }
-    };
-
-    window.trackWhenEnabled();
-
-  </script>
-</head><body><div class="flex flex-wrap" id="terms"><div class="w-100 ph3 ph4-m ph5-l"><p class="f5"><a class="return-to" href="/"><span>⬅︎ Return to front page</span></a></p></div><div class="w-100 ph3 ph4-m ph5-l"><h1>Impressum</h1><h3>Angaben gemäß § 5 TMG</h3><p>Lennard Timm<br />Stubbenkammerstr. 5<br />10437 Berlin</p></div><div class="w-100 ph3 ph4-m ph5-l"><h3>Kontakt</h3><p class="f5">E-Mail: <a href="mailto:hello@lennardtimm.de">hello@lennardtimm.de</a></p></div><div class="w-100 ph3 ph4-m ph5-l"><h3>Umsatzsteuer-ID</h3><p>Umsatzsteuer-Identifikationsnummer gemäß § 27a Umsatzsteuergesetz:</p><p>DE301512251</p></div><div class="w-100 ph3 ph4-m ph5-l"><p>Wir sind nicht bereit oder verpflichtet, an Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle teilzunehmen.</p></div></div><div class="w-100 pv3 pv5-ns center"><footer class="tc"><ul class="f4-ns f6"><li><a href="/impressum/">Impressum</a></li><li><a href="/privacy-policy/">Privacy Policy</a></li></ul></footer></div><script>
-window.cookieconsent.initialise({
-  "palette": {
-    "popup": {
-      "background": "#edeff5",
-      "text": "#838391"
-    },
-    "button": {
-      "background": "#001B44",
-      "text": "#F6FFFE"
-    }
-  },
-  "content": {
-    "dismiss": "Continue",
-    "link": "View Privacy Policy",
-    "href": "/privacy-policy"
-  },
-  "type": "opt-in",
-
-  onStatusChange: function(status, chosenBefore) {
-    var type = this.options.type;
-    var didConsent = this.hasConsented();
-
-    // Enable cookies
-    if (type == 'opt-in' && didConsent) {
-      Cookies.remove('sp_optout');
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="ie=edge" http-equiv="x-ua-compatible" />
+    <meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport" />
+    <meta content="Lennard Timm" name="author" />
+    <meta content="I help companies solve business problems through analytics. Together we review and improve your data & analytics stack and establish a data-driven culture." name="description" property="og:description" />
+    <meta content="/images/datacoach-a56be994.png" name="image" property="og:image" />
+    <meta content="Impressum &middot; lennardtimm.de" name="title" property="og:title" />
+    <meta content="628" property="og:image:height" />
+    <meta content="/images/datacoach-a56be994.png" property="og:image:secure_url" />
+    <meta content="/images/datacoach-a56be994.png" property="og:image:url" />
+    <meta content="1200" property="og:image:width" />
+    <meta content="en_GB" property="og:locale" />
+    <meta content="website" property="og:type" />
+    <meta content="2021-02-03T11:14:42Z" property="og:updated_time" />
+    <meta content="https://lennardtimm.de/impressum/" property="og:url" />
+    <link href="/favicon.png" rel="icon" sizes="32x32" type="image/png" />
+    <link href="/favicon.png" rel="icon" sizes="96x96" type="image/png" />
+    <link href="/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+    <link href="/favicon-apple-touch-144.png" rel="apple-touch-icon" sizes="144x144" />
+    <link href="/favicon-apple-touch-144.png" rel="apple-touch-icon-precomposed" sizes="144x144" />
+    <meta content="#ffffff" name="msapplication-TileColor" />
+    <meta content="/favicon-apple-touch-144.png" name="msapplication-TileImage" /><title>Impressum &middot; lennardtimm.de</title><link href="/stylesheets/site-615f071e.css" rel="stylesheet" /><script src="/javascripts/site-12e3a379.js"></script>
+    <script>
+      ;(function(p,l,o,w,i,n,g){if(!p[i]){p.GlobalSnowplowNamespace=p.GlobalSnowplowNamespace||[];
+      p.GlobalSnowplowNamespace.push(i);p[i]=function(){(p[i].q=p[i].q||[]).push(arguments)
+      };p[i].q=p[i].q||[];n=l.createElement(o);g=l.getElementsByTagName(o)[0];n.async=1;
+      n.src=w;g.parentNode.insertBefore(n,g)}}(window,document,"script","/javascripts/sp-5dceffef.js","snowplow"));
+      
+      window.snowplow('newTracker', 'sp', 'sp-collector.hndw.co', {
+        appId: 'lennardtimm.de',
+        cookieDomain: 'lennardtimm.de',
+        forceSecureTracker: true,
+        respectDoNotTrack: true,
+        respectOptOutCookie: true,
+        contexts: {
+          webPage: true,
+          performanceTiming: true
+        }
+      });
+      
+      window.trackWhenEnabled = function() {
+        var enabled = Cookies.get('cookieconsent_status') !== 'deny' &&
+          Cookies.get('sp_optout') === undefined;
+      
+        if (enabled) {
+          window.snowplow('enableActivityTracking', 30, 10);
+          window.snowplow('trackPageView');
+        }
+      };
+      
       window.trackWhenEnabled();
-    }
-  },
-
-  onRevokeChoice: function() {
-    var type = this.options.type;
-
-    // Disable cookies
-    if (type == 'opt-in') {
-      Cookies.set('sp_optout', 'true', { expires: 365 });
-    }
-  }
-});
-</script>
-</body></html>
+    </script>
+  </head>
+  <body>
+    <div class="flex flex-wrap" id="terms">
+      <div class="w-100 ph3 ph4-m ph5-l">
+        <p class="f5">
+          <a class="return-to" href="/"><span>⬅︎ Return to front page</span></a>
+        </p>
+      </div>
+      <div class="w-100 ph3 ph4-m ph5-l">
+        <h1>
+          Impressum
+        </h1>
+        <h3>
+          Angaben gemäß § 5 TMG
+        </h3>
+        <p>
+          Lennard Timm<br />Stubbenkammerstr. 5<br />10437 Berlin
+        </p>
+      </div>
+      <div class="w-100 ph3 ph4-m ph5-l">
+        <h3>
+          Kontakt
+        </h3>
+        <p class="f5">
+          E-Mail: <a href="mailto:hello@lennardtimm.de">hello@lennardtimm.de</a>
+        </p>
+      </div>
+      <div class="w-100 ph3 ph4-m ph5-l">
+        <h3>
+          Umsatzsteuer-ID
+        </h3>
+        <p>
+          Umsatzsteuer-Identifikationsnummer gemäß § 27a Umsatzsteuergesetz:
+        </p>
+        <p>
+          DE301512251
+        </p>
+      </div>
+      <div class="w-100 ph3 ph4-m ph5-l">
+        <p>
+          Wir sind nicht bereit oder verpflichtet, an Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle teilzunehmen.
+        </p>
+      </div>
+    </div><div class="w-100 pv3 pv5-ns center">
+      <footer class="tc">
+        <ul class="f4-ns f6">
+          <li>
+            <a href="/impressum/">Impressum</a>
+          </li>
+          <li>
+            <a href="/privacy-policy/">Privacy Policy</a>
+          </li>
+        </ul>
+      </footer>
+    </div><script type="text/javascript">
+      window.cookieconsent.initialise({
+        "palette": {
+          "popup": {
+            "background": "#edeff5",
+            "text": "#838391"
+          },
+          "button": {
+            "background": "#001B44",
+            "text": "#F6FFFE"
+          }
+        },
+        "content": {
+          "dismiss": "Continue",
+          "link": "View Privacy Policy",
+          "href": "/privacy-policy"
+        },
+        "type": "opt-out",
+    
+        onStatusChange: function(status, chosenBefore) {
+          var type = this.options.type;
+          var didConsent = this.hasConsented();
+    
+          // Enable cookies
+          if (type == 'opt-in' && didConsent) {
+            Cookies.remove('sp_optout');
+            window.trackWhenEnabled();
+          }
+        },
+    
+        onRevokeChoice: function() {
+          var type = this.options.type;
+    
+          // Disable cookies
+          if (type == 'opt-in') {
+            Cookies.set('sp_optout', 'true', { expires: 365 });
+          }
+        }
+      });
+    </script>
+    
+    <script type="text/javascript">
+      _linkedin_partner_id = "2706818";
+      window._linkedin_data_partner_ids = window._linkedin_data_partner_ids || [];
+      window._linkedin_data_partner_ids.push(_linkedin_partner_id);
+    </script>
+    <script type="text/javascript">
+      (function(){var s = document.getElementsByTagName("script")[0];
+      var b = document.createElement("script");
+      b.type = "text/javascript";b.async = true;
+      b.src = "https://snap.licdn.com/li.lms-analytics/insight.min.js";
+      s.parentNode.insertBefore(b, s);})();
+    </script>
+    <noscript>
+      <img height="1" width="1" style="display:none;" alt="" src="https://px.ads.linkedin.com/collect/?pid=2706818&fmt=gif" />
+    </noscript>
+    
+  </body>
+</html>
