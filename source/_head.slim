@@ -1,0 +1,73 @@
+= stylesheet_link_tag 'site'
+= javascript_include_tag 'cookieconsent.min'
+= javascript_include_tag 'js.cookie'
+
+javascript:
+  window.cookieconsent.initialise({
+    "palette": {
+      "popup": {
+        "background": "#edeff5",
+        "text": "#838391"
+      },
+      "button": {
+        "background": "#001B44",
+        "text": "#F6FFFE"
+      }
+    },
+    "content": {
+      "dismiss": "Continue",
+      "link": "View Privacy Policy",
+      "href": "/privacy-policy"
+    },
+    "type": "opt-out",
+
+    onStatusChange: function(status, chosenBefore) {
+      var type = this.options.type;
+      var didConsent = this.hasConsented();
+
+      // Enable cookies
+      if (type == 'opt-in' && didConsent) {
+        Cookies.remove('sp_optout');
+        window.trackWhenEnabled();
+      }
+    },
+
+    onRevokeChoice: function() {
+      var type = this.options.type;
+
+      // Disable cookies
+      if (type == 'opt-in') {
+        Cookies.set('sp_optout', 'true', { expires: 365 });
+      }
+    }
+  });
+
+javascript:
+  ;(function(p,l,o,w,i,n,g){if(!p[i]){p.GlobalSnowplowNamespace=p.GlobalSnowplowNamespace||[];
+  p.GlobalSnowplowNamespace.push(i);p[i]=function(){(p[i].q=p[i].q||[]).push(arguments)
+  };p[i].q=p[i].q||[];n=l.createElement(o);g=l.getElementsByTagName(o)[0];n.async=1;
+  n.src=w;g.parentNode.insertBefore(n,g)}}(window,document,"script","#{{ asset_path :js, 'sp.js' }}","snowplow"));
+
+  window.snowplow('newTracker', 'sp', '#{{ ENV['SP_COLLECTOR_HOST'] }}', {
+    appId: '#{{ build? ? "lennardtimm.de" : "lennardtimm.development" }}',
+    cookieDomain: '#{{ build? ? "lennardtimm.de" : "lennardtimm.development" }}',
+    forceSecureTracker: true,
+    respectDoNotTrack: true,
+    respectOptOutCookie: true,
+    contexts: {
+      webPage: true,
+      performanceTiming: true
+    }
+  });
+
+  window.trackWhenEnabled = function() {
+    var enabled = Cookies.get('cookieconsent_status') !== 'deny' &&
+      Cookies.get('sp_optout') === undefined;
+
+    if (enabled) {
+      window.snowplow('enableActivityTracking', 30, 10);
+      window.snowplow('trackPageView');
+    }
+  };
+
+  window.trackWhenEnabled();
