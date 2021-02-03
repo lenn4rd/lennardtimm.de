@@ -1,4 +1,45 @@
 <script type="text/javascript">
+  window.cookieconsent.initialise({
+    "palette": {
+      "popup": {
+        "background": "#edeff5",
+        "text": "#838391"
+      },
+      "button": {
+        "background": "#001B44",
+        "text": "#F6FFFE"
+      }
+    },
+    "content": {
+      "dismiss": "Continue",
+      "link": "View Privacy Policy",
+      "href": "/privacy-policy"
+    },
+    "type": "opt-out",
+
+    onStatusChange: function(status, chosenBefore) {
+      var type = this.options.type;
+      var didConsent = this.hasConsented();
+
+      // Enable cookies
+      if (type == 'opt-in' && didConsent) {
+        Cookies.remove('sp_optout');
+        window.trackWhenEnabled();
+      }
+    },
+
+    onRevokeChoice: function() {
+      var type = this.options.type;
+
+      // Disable cookies
+      if (type == 'opt-in') {
+        Cookies.set('sp_optout', 'true', { expires: 365 });
+      }
+    }
+  });
+</script>
+
+<script type="text/javascript">
   _linkedin_partner_id = "2706818";
   window._linkedin_data_partner_ids = window._linkedin_data_partner_ids || [];
   window._linkedin_data_partner_ids.push(_linkedin_partner_id);

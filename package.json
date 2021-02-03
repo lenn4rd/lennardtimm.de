@@ -6,8 +6,17 @@
   "author": "Lennard Timm <hello@lennardtimm.de>",
   "license": "MIT",
   "dependencies": {
+    "@babel/preset-env": "^7.12.13",
+    "babel-brunch": "^7.0.1",
     "cookieconsent": "^3.1.1",
     "js-cookie": "^2.2.1",
     "tachyons": "^4.11.1"
+  },
+  "devDependencies": {
+    "brunch": "^3.0.0",
+    "clean-css-brunch": "^3.0.0",
+    "css-brunch": "^2.10.0",
+    "javascript-brunch": "^2.10.0",
+    "uglify-js-brunch": "^2.10.0"
   }
 }

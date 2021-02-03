@@ -1,46 +1,5 @@
 = stylesheet_link_tag 'site'
-= javascript_include_tag 'cookieconsent.min'
-= javascript_include_tag 'js.cookie'
-
-javascript:
-  window.cookieconsent.initialise({
-    "palette": {
-      "popup": {
-        "background": "#edeff5",
-        "text": "#838391"
-      },
-      "button": {
-        "background": "#001B44",
-        "text": "#F6FFFE"
-      }
-    },
-    "content": {
-      "dismiss": "Continue",
-      "link": "View Privacy Policy",
-      "href": "/privacy-policy"
-    },
-    "type": "opt-out",
-
-    onStatusChange: function(status, chosenBefore) {
-      var type = this.options.type;
-      var didConsent = this.hasConsented();
-
-      // Enable cookies
-      if (type == 'opt-in' && didConsent) {
-        Cookies.remove('sp_optout');
-        window.trackWhenEnabled();
-      }
-    },
-
-    onRevokeChoice: function() {
-      var type = this.options.type;
-
-      // Disable cookies
-      if (type == 'opt-in') {
-        Cookies.set('sp_optout', 'true', { expires: 365 });
-      }
-    }
-  });
+= javascript_include_tag 'site'
 
 javascript:
   ;(function(p,l,o,w,i,n,g){if(!p[i]){p.GlobalSnowplowNamespace=p.GlobalSnowplowNamespace||[];
