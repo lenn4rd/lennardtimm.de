@@ -4,4 +4,4 @@
       li
         = link_to 'Impressum', 'impressum'
       li
-        = link_to 'Privacy Policy', 'privacy-policy'
+        = link_to t(:privacy_policy), I18n.locale == 'en' ? 'en/' : '' + t('paths.privacy-policy')

@@ -1,0 +1,9 @@
+---
+de:
+  description: Ich löse unternehmerische Herausforderungen mithilfe von Data & Analytics. Gemeinsam untersuchen wir euren Data & Analytics-Stack und bauen eine datengetriebene Unternehmenskultur auf.
+  locale: de_DE
+
+  privacy_policy: Datenschutz
+
+  paths:
+    "privacy-policy": datenschutz

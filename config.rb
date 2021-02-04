@@ -17,6 +17,7 @@ activate :external_pipeline,
   latency: 1
 
 activate :directory_indexes
+activate :i18n
 
 # Helpers
 helpers do
@@ -32,6 +33,9 @@ end
 page '/*.xml', layout: false
 page '/*.json', layout: false
 page '/*.txt', layout: false
+
+# Redirects
+redirect 'privacy-policy/index.html', to: '/en/privacy-policy/'
 
 # Build-specific configuration
 # https://middlemanapp.com/advanced/configuration/#environment-specific-settings

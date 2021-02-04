@@ -1,0 +1,9 @@
+---
+en:
+  description: I help companies solve business problems through analytics. Together we review and improve your data & analytics stack and establish a data-driven culture.
+  locale: en_GB
+
+  privacy_policy: Privacy Policy
+
+  paths:
+    "privacy-policy": privacy-policy
