@@ -14,7 +14,7 @@
     <meta content="1200" property="og:image:width" />
     <meta content="de_DE" property="og:locale" />
     <meta content="website" property="og:type" />
-    <meta content="2023-03-11T00:30:24Z" property="og:updated_time" />
+    <meta content="2025-09-16T20:11:53Z" property="og:updated_time" />
     <meta content="https://lennardtimm.de/playbook/" property="og:url" />
     <link href="/favicon.png" rel="icon" sizes="32x32" type="image/png" />
     <link href="/favicon.png" rel="icon" sizes="96x96" type="image/png" />
@@ -22,37 +22,44 @@
     <link href="/favicon-apple-touch-144.png" rel="apple-touch-icon" sizes="144x144" />
     <link href="/favicon-apple-touch-144.png" rel="apple-touch-icon-precomposed" sizes="144x144" />
     <meta content="#ffffff" name="msapplication-TileColor" />
-    <meta content="/favicon-apple-touch-144.png" name="msapplication-TileImage" /><title>The Data Strategist's Playbook &middot; curated by Lennard Timm</title><link href="/stylesheets/site-615f071e.css" rel="stylesheet" /><script src="/javascripts/site-12e3a379.js"></script>
-    <script>
-      ;(function(p,l,o,w,i,n,g){if(!p[i]){p.GlobalSnowplowNamespace=p.GlobalSnowplowNamespace||[];
-      p.GlobalSnowplowNamespace.push(i);p[i]=function(){(p[i].q=p[i].q||[]).push(arguments)
-      };p[i].q=p[i].q||[];n=l.createElement(o);g=l.getElementsByTagName(o)[0];n.async=1;
-      n.src=w;g.parentNode.insertBefore(n,g)}}(window,document,"script","/javascripts/sp-5dceffef.js","snowplow"));
-      
-      window.snowplow('newTracker', 'sp', 'sp-collector.hndw.co', {
-        appId: 'lennardtimm.de',
-        cookieDomain: 'lennardtimm.de',
-        forceSecureTracker: true,
-        respectDoNotTrack: true,
-        respectOptOutCookie: true,
-        contexts: {
-          webPage: true,
-          performanceTiming: true
-        }
-      });
-      
+    <meta content="/favicon-apple-touch-144.png" name="msapplication-TileImage" /><title>The Data Strategist's Playbook &middot; curated by Lennard Timm</title><link href="/stylesheets/site-b4166f54.css" rel="stylesheet" /><script src="/javascripts/cookieconsent.min-d5bef998.js"></script><script src="/javascripts/js.cookie.min-d6cd1e79.js"></script><script type="text/javascript" async=1>
+        ;(function(p,l,o,w,i,n,g){if(!p[i]){p.GlobalSnowplowNamespace=p.GlobalSnowplowNamespace||[]; p.GlobalSnowplowNamespace.push(i);p[i]=function(){(p[i].q=p[i].q||[]).push(arguments) };p[i].q=p[i].q||[];n=l.createElement(o);g=l.getElementsByTagName(o)[0];n.async=1; n.src=w;g.parentNode.insertBefore(n,g)}}(window,document,"script","/javascripts/sp-2f0ea385.js","snowplow"));
+    </script>
+    
+    <script type="text/javascript">
+        snowplow('newTracker', 'sp', "https://events.createdna.de", {
+            appId: 'lennardtimm.de',
+            // discoverRootDomain: true,
+            cookieDomain: '.lennardtimm.de',
+            cookieSameSite: 'Lax',
+            contexts: {
+                browser: true,
+                clientHints: true,
+                performanceTiming: true,
+                session: true,
+            },
+            respectDoNotTrack: true,
+            respectOptOutCookie: true,
+        });
+    </script>
+    
+    <script type="text/javascript">
       window.trackWhenEnabled = function() {
-        var enabled = Cookies.get('cookieconsent_status') !== 'deny' &&
+        var enabled = Cookies.get('cookieconsent_status') === 'allow' &&
           Cookies.get('sp_optout') === undefined;
-      
+    
         if (enabled) {
-          window.snowplow('enableActivityTracking', 30, 10);
+          window.snowplow('enableActivityTracking', {
+            minimumVisitLength: 10,
+            heartbeatDelay: 10
+          });
           window.snowplow('trackPageView');
         }
       };
-      
+    
       window.trackWhenEnabled();
     </script>
+    
   </head>
   <body>
     <div class="flex flex-wrap">
@@ -150,54 +157,6 @@
         </p>
       </section>
       <section class="w100 ph5 ph6-l pv4 f3-ns f5" id="highlights">
-        <div class="entry ph5-l">
-          <h4>
-            <a href="https://medium.com/latentview-data-services/data-platforms-for-2020-beyond-fca127cbf787" target="_blank">Data Platforms for 2020 & Beyond</a>
-          </h4>
-          <p class="f4 mt-0">
-            An interesting argument: data lakes are created the FOMO way; useful only to a handful of specialists in your organisation because the data lacks clarity. The author describes why domain-specific data services are the logical successor to data lakes.
-          </p>
-        </div>
-        <div class="entry ph5-l">
-          <h4>
-            <a href="https://towardsdatascience.com/numbers-every-data-engineer-should-know-cc5c1a0bc3ec" target="_blank">Numbers Every Data Engineer Should Know</a>
-          </h4>
-          <p class="f4 mt-0">
-            A list of data pipeline-related metrics that help understand whether or not all components in your data infrastructure are running nicely or should be closely monitored and improved upon.
-          </p>
-        </div>
-        <div class="entry ph5-l">
-          <h4>
-            <a href="https://medium.com/weareservian/why-data-engineering-needs-automated-testing-a37a0844d7db" target="_blank">Why Great Data Engineering Needs Automated Testing</a>
-          </h4>
-          <p class="f4 mt-0">
-            Even though writing tests for ever-changing data isn't as easy and straightforward as for regular code, it shouldn't be an excuse to skip automated testing. Don't aim for 100% coverage; start assuring your riskiest metrics are always correct and work your way to the (data) source.
-          </p>
-        </div>
-        <div class="entry ph5-l">
-          <h4>
-            <a href="https://medium.com/@ke_73209/building-a-data-driven-culture-one-step-at-a-time-85409c164630" target="_blank">Building A Data Driven Culture — One Step at a Time</a>
-          </h4>
-          <p class="f4 mt-0">
-            This is interesting: when creating a data-driven culture, pick a problem that is small and easy to solve, make sure the solution is not only presented but implemented, pick a slightly bigger problem and repeat.
-          </p>
-        </div>
-        <div class="entry ph5-l">
-          <h4>
-            <a href="https://medium.com/airbnb-engineering/data-quality-at-airbnb-e582465f3ef7" target="_blank">Data Quality at Airbnb. Part 1 — Rebuilding at Scale</a>
-          </h4>
-          <p class="f4 mt-0">
-            Rewriting software or rebuilding systems from scratch is unpopular with managers because it's expensive and at first glance the result is identical to what you already have when changes happen under the hood. Airbnb did rebuild their data infrastructure to ensure higher quality data and share their approach.
-          </p>
-        </div>
-        <div class="entry ph5-l">
-          <h4>
-            <a href="https://medium.com/snaptravel/how-should-our-company-structure-our-data-team-e71f6846024d" target="_blank">How should our company structure our data team?</a>
-          </h4>
-          <p class="f4 mt-0">
-            There a few ways to set up data teams with data engineers and data analysts and their colleagues in other teams. In this interesting case study, we learn how travel start-up Snaptravel iterated over classic models like centralised and embedded teams and what their ideal team structure looks like.
-          </p>
-        </div>
       </section>
       <section class="w100 ph5 ph6-l pv4 f2-ns f4">
         <p>
@@ -273,34 +232,35 @@
           }
         },
         "content": {
-          "dismiss": "Continue",
+          "message": "This website uses cookies to ensure you get the best experience on our website.",
+          "allow": "Allow cookies",
+          "deny": "Decline",
           "link": "View Privacy Policy",
           "href": "/privacy-policy"
         },
-        "type": "opt-out",
+        "type": "opt-in",
     
-        onStatusChange: function(status, chosenBefore) {
-          var type = this.options.type;
-          var didConsent = this.hasConsented();
-    
-          // Enable cookies
-          if (type == 'opt-in' && didConsent) {
+        onStatusChange: function(status) {
+          // Enable cookies when user explicitly allows
+          if (status === 'allow') {
             Cookies.remove('sp_optout');
             window.trackWhenEnabled();
+          }
+    
+          // Disable cookies when user denies
+          if (status === 'deny') {
+            Cookies.set('sp_optout', 'true', { expires: 365 });
           }
         },
     
         onRevokeChoice: function() {
-          var type = this.options.type;
-    
-          // Disable cookies
-          if (type == 'opt-in') {
-            Cookies.set('sp_optout', 'true', { expires: 365 });
-          }
+            // Disable cookies when user revokes choice
+          Cookies.set('sp_optout', 'true', { expires: 365 });
         }
       });
     </script>
     
+    <!-- LinkedIn -->
     <script type="text/javascript">
       _linkedin_partner_id = "2706818";
       window._linkedin_data_partner_ids = window._linkedin_data_partner_ids || [];

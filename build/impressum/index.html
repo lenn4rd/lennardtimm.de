@@ -14,7 +14,7 @@
     <meta content="1200" property="og:image:width" />
     <meta content="de_DE" property="og:locale" />
     <meta content="website" property="og:type" />
-    <meta content="2023-03-11T00:30:24Z" property="og:updated_time" />
+    <meta content="2025-09-16T20:11:52Z" property="og:updated_time" />
     <meta content="https://lennardtimm.de/impressum/" property="og:url" />
     <link href="/favicon.png" rel="icon" sizes="32x32" type="image/png" />
     <link href="/favicon.png" rel="icon" sizes="96x96" type="image/png" />
@@ -22,37 +22,44 @@
     <link href="/favicon-apple-touch-144.png" rel="apple-touch-icon" sizes="144x144" />
     <link href="/favicon-apple-touch-144.png" rel="apple-touch-icon-precomposed" sizes="144x144" />
     <meta content="#ffffff" name="msapplication-TileColor" />
-    <meta content="/favicon-apple-touch-144.png" name="msapplication-TileImage" /><title>Impressum &middot; lennardtimm.de</title><link href="/stylesheets/site-615f071e.css" rel="stylesheet" /><script src="/javascripts/site-12e3a379.js"></script>
-    <script>
-      ;(function(p,l,o,w,i,n,g){if(!p[i]){p.GlobalSnowplowNamespace=p.GlobalSnowplowNamespace||[];
-      p.GlobalSnowplowNamespace.push(i);p[i]=function(){(p[i].q=p[i].q||[]).push(arguments)
-      };p[i].q=p[i].q||[];n=l.createElement(o);g=l.getElementsByTagName(o)[0];n.async=1;
-      n.src=w;g.parentNode.insertBefore(n,g)}}(window,document,"script","/javascripts/sp-5dceffef.js","snowplow"));
-      
-      window.snowplow('newTracker', 'sp', 'sp-collector.hndw.co', {
-        appId: 'lennardtimm.de',
-        cookieDomain: 'lennardtimm.de',
-        forceSecureTracker: true,
-        respectDoNotTrack: true,
-        respectOptOutCookie: true,
-        contexts: {
-          webPage: true,
-          performanceTiming: true
-        }
-      });
-      
+    <meta content="/favicon-apple-touch-144.png" name="msapplication-TileImage" /><title>Impressum &middot; lennardtimm.de</title><link href="/stylesheets/site-b4166f54.css" rel="stylesheet" /><script src="/javascripts/cookieconsent.min-d5bef998.js"></script><script src="/javascripts/js.cookie.min-d6cd1e79.js"></script><script type="text/javascript" async=1>
+        ;(function(p,l,o,w,i,n,g){if(!p[i]){p.GlobalSnowplowNamespace=p.GlobalSnowplowNamespace||[]; p.GlobalSnowplowNamespace.push(i);p[i]=function(){(p[i].q=p[i].q||[]).push(arguments) };p[i].q=p[i].q||[];n=l.createElement(o);g=l.getElementsByTagName(o)[0];n.async=1; n.src=w;g.parentNode.insertBefore(n,g)}}(window,document,"script","/javascripts/sp-2f0ea385.js","snowplow"));
+    </script>
+    
+    <script type="text/javascript">
+        snowplow('newTracker', 'sp', "https://events.createdna.de", {
+            appId: 'lennardtimm.de',
+            // discoverRootDomain: true,
+            cookieDomain: '.lennardtimm.de',
+            cookieSameSite: 'Lax',
+            contexts: {
+                browser: true,
+                clientHints: true,
+                performanceTiming: true,
+                session: true,
+            },
+            respectDoNotTrack: true,
+            respectOptOutCookie: true,
+        });
+    </script>
+    
+    <script type="text/javascript">
       window.trackWhenEnabled = function() {
-        var enabled = Cookies.get('cookieconsent_status') !== 'deny' &&
+        var enabled = Cookies.get('cookieconsent_status') === 'allow' &&
           Cookies.get('sp_optout') === undefined;
-      
+    
         if (enabled) {
-          window.snowplow('enableActivityTracking', 30, 10);
+          window.snowplow('enableActivityTracking', {
+            minimumVisitLength: 10,
+            heartbeatDelay: 10
+          });
           window.snowplow('trackPageView');
         }
       };
-      
+    
       window.trackWhenEnabled();
     </script>
+    
   </head>
   <body>
     <div class="flex flex-wrap" id="terms">
@@ -65,11 +72,17 @@
         <h1>
           Impressum
         </h1>
-        <h3>
-          Angaben gemäß § 5 TMG
-        </h3>
         <p>
-          Lennard Timm<br />Heerstr. 88<br />14055 Berlin
+          create DNA GmbH<br />Hardenbergstr. 32<br />10623 Berlin
+        </p>
+        <p>
+          <strong>Vertretungsberechtigter Geschäftsführer:<br /></strong>Lennard Timm
+        </p>
+        <p>
+          <strong>Handelsregister:<br /></strong>HRB 255804 B
+        </p>
+        <p>
+          <strong>Registergericht:<br /></strong>Amtsgericht Berlin-Charlottenburg
         </p>
       </div>
       <div class="w-100 ph3 ph4-m ph5-l">
@@ -77,7 +90,10 @@
           Kontakt
         </h3>
         <p class="f5">
-          E-Mail: <a href="mailto:hello@lennardtimm.de">hello@lennardtimm.de</a>
+          Telefon: 030 235 933 588
+        </p>
+        <p class="f5">
+          E-Mail: <a href="mailto:hello@createdna.de">hello@createdna.de</a>
         </p>
       </div>
       <div class="w-100 ph3 ph4-m ph5-l">
@@ -85,10 +101,18 @@
           Umsatzsteuer-ID
         </h3>
         <p>
-          Umsatzsteuer-Identifikationsnummer gemäß § 27a Umsatzsteuergesetz:
+          Umsatzsteuer-Identifikationsnummer gemäß § 27 a Umsatzsteuergesetz:
         </p>
         <p>
-          DE301512251
+          DE363535379
+        </p>
+      </div>
+      <div class="w-100 ph3 ph4-m ph5-l">
+        <h3>
+          Redaktionell verantwortlich
+        </h3>
+        <p>
+          create DNA GmbH<br />Herr Lennard Timm<br />Hardenbergstr. 32<br />10623 Berlin
         </p>
       </div>
       <div class="w-100 ph3 ph4-m ph5-l">
@@ -120,34 +144,35 @@
           }
         },
         "content": {
-          "dismiss": "Continue",
+          "message": "This website uses cookies to ensure you get the best experience on our website.",
+          "allow": "Allow cookies",
+          "deny": "Decline",
           "link": "View Privacy Policy",
           "href": "/privacy-policy"
         },
-        "type": "opt-out",
+        "type": "opt-in",
     
-        onStatusChange: function(status, chosenBefore) {
-          var type = this.options.type;
-          var didConsent = this.hasConsented();
-    
-          // Enable cookies
-          if (type == 'opt-in' && didConsent) {
+        onStatusChange: function(status) {
+          // Enable cookies when user explicitly allows
+          if (status === 'allow') {
             Cookies.remove('sp_optout');
             window.trackWhenEnabled();
+          }
+    
+          // Disable cookies when user denies
+          if (status === 'deny') {
+            Cookies.set('sp_optout', 'true', { expires: 365 });
           }
         },
     
         onRevokeChoice: function() {
-          var type = this.options.type;
-    
-          // Disable cookies
-          if (type == 'opt-in') {
-            Cookies.set('sp_optout', 'true', { expires: 365 });
-          }
+            // Disable cookies when user revokes choice
+          Cookies.set('sp_optout', 'true', { expires: 365 });
         }
       });
     </script>
     
+    <!-- LinkedIn -->
     <script type="text/javascript">
       _linkedin_partner_id = "2706818";
       window._linkedin_data_partner_ids = window._linkedin_data_partner_ids || [];
