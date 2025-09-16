@@ -1,0 +1,40 @@
+<script type="text/javascript" async=1>
+    ;(function(p,l,o,w,i,n,g){if(!p[i]){p.GlobalSnowplowNamespace=p.GlobalSnowplowNamespace||[]; p.GlobalSnowplowNamespace.push(i);p[i]=function(){(p[i].q=p[i].q||[]).push(arguments) };p[i].q=p[i].q||[];n=l.createElement(o);g=l.getElementsByTagName(o)[0];n.async=1; n.src=w;g.parentNode.insertBefore(n,g)}}(window,document,"script","<%= asset_path :js, 'sp.js' %>","snowplow"));
+</script>
+
+<script type="text/javascript">
+    snowplow('newTracker', 'sp', "<%= ENV['COLLECTOR_URL'] %>", {
+        appId: '<%= build? ? "lennardtimm.de" : "lennardtimm.development" %>',
+        // discoverRootDomain: true,
+        cookieDomain: '.lennardtimm.de',
+        cookieSameSite: 'Lax',
+        contexts: {
+            performanceTiming: true,
+            session: true
+        },
+        respectDoNotTrack: true,
+        respectOptOutCookie: true,
+    });
+</script>
+
+<script type="text/javascript">
+    snowplow('enableActivityTracking', {
+        minimumVisitLength: 30,
+        heartbeatDelay: 10
+    });
+    snowplow('trackPageView');
+</script>
+
+<!--<script type="text/javascript">-->
+<!--  window.trackWhenEnabled = function() {-->
+<!--    var enabled = Cookies.get('cookieconsent_status') !== 'deny' &&-->
+<!--      Cookies.get('sp_optout') === undefined;-->
+
+<!--    if (enabled) {-->
+<!--      window.snowplow('enableActivityTracking', 30, 10);-->
+<!--      window.snowplow('trackPageView');-->
+<!--    }-->
+<!--  };-->
+
+<!--  window.trackWhenEnabled();-->
+<!--</script>-->
