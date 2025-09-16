@@ -11,30 +11,30 @@
       }
     },
     "content": {
-      "dismiss": "Continue",
+      "message": "This website uses cookies to ensure you get the best experience on our website.",
+      "allow": "Allow cookies",
+      "deny": "Decline",
       "link": "View Privacy Policy",
       "href": "/privacy-policy"
     },
-    "type": "opt-out",
+    "type": "opt-in",
 
-    onStatusChange: function(status, chosenBefore) {
-      var type = this.options.type;
-      var didConsent = this.hasConsented();
-
-      // Enable cookies
-      if (type == 'opt-in' && didConsent) {
+    onStatusChange: function(status) {
+      // Enable cookies when user explicitly allows
+      if (status === 'allow') {
         Cookies.remove('sp_optout');
         window.trackWhenEnabled();
+      }
+
+      // Disable cookies when user denies
+      if (status === 'deny') {
+        Cookies.set('sp_optout', 'true', { expires: 365 });
       }
     },
 
     onRevokeChoice: function() {
-      var type = this.options.type;
-
-      // Disable cookies
-      if (type == 'opt-in') {
-        Cookies.set('sp_optout', 'true', { expires: 365 });
-      }
+        // Disable cookies when user revokes choice
+      Cookies.set('sp_optout', 'true', { expires: 365 });
     }
   });
 </script>

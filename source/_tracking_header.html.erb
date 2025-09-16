@@ -9,8 +9,10 @@
         cookieDomain: '.lennardtimm.de',
         cookieSameSite: 'Lax',
         contexts: {
+            browser: true,
+            clientHints: true,
             performanceTiming: true,
-            session: true
+            session: true,
         },
         respectDoNotTrack: true,
         respectOptOutCookie: true,
@@ -18,23 +20,18 @@
 </script>
 
 <script type="text/javascript">
-    snowplow('enableActivityTracking', {
-        minimumVisitLength: 30,
+  window.trackWhenEnabled = function() {
+    var enabled = Cookies.get('cookieconsent_status') === 'allow' &&
+      Cookies.get('sp_optout') === undefined;
+
+    if (enabled) {
+      window.snowplow('enableActivityTracking', {
+        minimumVisitLength: 10,
         heartbeatDelay: 10
-    });
-    snowplow('trackPageView');
+      });
+      window.snowplow('trackPageView');
+    }
+  };
+
+  window.trackWhenEnabled();
 </script>
-
-<!--<script type="text/javascript">-->
-<!--  window.trackWhenEnabled = function() {-->
-<!--    var enabled = Cookies.get('cookieconsent_status') !== 'deny' &&-->
-<!--      Cookies.get('sp_optout') === undefined;-->
-
-<!--    if (enabled) {-->
-<!--      window.snowplow('enableActivityTracking', 30, 10);-->
-<!--      window.snowplow('trackPageView');-->
-<!--    }-->
-<!--  };-->
-
-<!--  window.trackWhenEnabled();-->
-<!--</script>-->

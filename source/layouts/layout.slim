@@ -6,9 +6,12 @@ html lang="#{I18n.locale}"
     title
       = current_page.data.title || 'Lennard Timm &middot; Data Coach for Start-ups'
 
-    = partial :head
+    = stylesheet_link_tag 'site'
+    = javascript_include_tag 'cookieconsent.min'
+    = javascript_include_tag 'js.cookie.min'
+    = partial :tracking_header
 
   body
     = yield
     = partial :footer
-    = partial :tracking
+    = partial :tracking_footer

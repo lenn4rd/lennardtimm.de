@@ -10,12 +10,6 @@ activate :autoprefixer do |prefix|
   prefix.browsers = 'last 2 versions'
 end
 
-activate :external_pipeline,
-  name: :brunch,
-  command: build? ? './node_modules/brunch/bin/brunch build --production --env production' : './node_modules/brunch/bin/brunch watch --stdin',
-  source: "tmp/dist",
-  latency: 1
-
 activate :directory_indexes
 activate :i18n
 
@@ -46,7 +40,8 @@ configure :development do
 end
 
 configure :build do
-  activate :asset_hash
   activate :minify_css
   activate :minify_javascript
+
+  activate :asset_hash, ignore: [/^tmp/]
 end
