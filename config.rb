@@ -6,9 +6,9 @@ Slim::Engine.options[:pretty] = true
 # Activate and configure extensions
 # https://middlemanapp.com/advanced/configuration/#configuring-extensions
 
-activate :autoprefixer do |prefix|
-  prefix.browsers = 'last 2 versions'
-end
+# activate :autoprefixer do |prefix|
+#   prefix.browsers = 'last 2 versions'
+# end
 
 activate :directory_indexes
 activate :i18n
@@ -36,7 +36,7 @@ redirect 'privacy-policy/index.html', to: '/en/privacy-policy/'
 
 configure :development do
   activate :dotenv
-  activate :livereload
+  # activate :livereload
 end
 
 configure :build do
